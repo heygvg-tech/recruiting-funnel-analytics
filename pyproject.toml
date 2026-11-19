@@ -1,0 +1,22 @@
+[project]
+name = "recruiting-funnel-analytics"
+version = "0.1.0"
+description = "Turn an ATS export into a recruiting funnel report: pass-through, time in stage, source of hire."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Genevieve Garcia" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+funnel = "funnel.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["funnel"]
